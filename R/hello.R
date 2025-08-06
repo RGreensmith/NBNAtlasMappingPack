@@ -13,6 +13,16 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-hello <- function() {
+#' Hello, world!
+#'
+#' This function allows you to print 'Hello, world!'.
+#' @param  a (character) print this. 
+#' @keywords cats
+#' @export
+#' @examples
+#' hello()
+#' 
+hello <- function(a) {
   print("Hello, world!")
+  print(a)
 }
