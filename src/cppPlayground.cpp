@@ -40,5 +40,6 @@ cppFunction('int add(int x, int y, int z) {
 add
 add(1,2,3)
 sumTwoC(c(1, 2, 3), c(4, 5, 6))
+
 */
 

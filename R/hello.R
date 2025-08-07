@@ -13,7 +13,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-hello <- function(a) {
+hello <- function(a = "a") {
   print("Hello, world!")
   print(a)
 
@@ -23,10 +23,3 @@ hello <- function(a) {
   )
   print(hello2())
 }
-
-# cppFunction('int add(int x, int y, int z) {
-#   int sum = x + y + z;
-#   return sum;
-# }')
-# add
-# add(1,2,3)
