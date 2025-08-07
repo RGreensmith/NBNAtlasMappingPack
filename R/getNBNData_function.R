@@ -1,7 +1,7 @@
-install.packages("httr")
-install.packages("jsonlite")
-library(httr)
-library(jsonlite)
+# install.packages("httr")
+# install.packages("jsonlite")
+# library(httr)
+# library(jsonlite)
 
 ###### Get NBN Atlas data ######
 # NBN Atlas record filter:
@@ -13,7 +13,7 @@ getNBNData = function(latinName,numRecords){
   binomNmSplit = strsplit(latinName,"[ ]")
   genus = binomNmSplit[[1]][1]
   species = binomNmSplit[[1]][2]
-  
+
   if (species != "sp.") {
     api=paste("https://records-ws.nbnatlas.org/occurrences/search?",
               "q=*:*&fq=genus:",
@@ -49,5 +49,5 @@ getNBNData = function(latinName,numRecords){
 
 
 
-  
+
 
