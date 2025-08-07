@@ -12,7 +12,7 @@ NumericVector timesThree(NumericVector x) {
 }
 
 // [[Rcpp::export]]
-CharacterVector hello() {
+CharacterVector hello2() {
   return "sausage";
 }
 
@@ -31,7 +31,7 @@ timesTwo(42)
 timesThree(3)
 a = timesThree(3)*2
 print(a)
-hello()
+hello2()
 
 cppFunction('int add(int x, int y, int z) {
   int sum = x + y + z;
