@@ -1,0 +1,44 @@
+#include <Rcpp.h>
+using namespace Rcpp;
+
+// [[Rcpp::export]]
+NumericVector timesTwo(NumericVector x) {
+  return x * 2;
+}
+
+// [[Rcpp::export]]
+NumericVector timesThree(NumericVector x) {
+  return x * 3;
+}
+
+// [[Rcpp::export]]
+CharacterVector hello() {
+  return "sausage";
+}
+
+// [[Rcpp::export]]
+double sumTwoC(NumericVector x, NumericVector y) {
+  int n = x.size();
+  double total = 0;
+  for(int i = 0; i < n; ++i) {
+    total += x[i] + y[i];
+  }
+  return total;
+}
+
+/*** R
+timesTwo(42)
+timesThree(3)
+a = timesThree(3)*2
+print(a)
+hello()
+
+cppFunction('int add(int x, int y, int z) {
+  int sum = x + y + z;
+  return sum;
+}')
+add
+add(1,2,3)
+sumTwoC(c(1, 2, 3), c(4, 5, 6))
+*/
+
