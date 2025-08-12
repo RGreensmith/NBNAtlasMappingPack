@@ -39,6 +39,10 @@ class MyClass {
     public:
         int myNum;
         string myString;
+        void myMethod()
+        { 
+            cout << "Hello World!";
+        }
 };
 
 double meanC(vector<int> x)
@@ -86,6 +90,13 @@ int main()
 
     cout << myObj2.myNum << "\n";
     cout << myObj2.myString << endl;
+
+    
+    
+    MyClass myObj3;    // Create an object of MyClass
+    myObj.myMethod(); // Call the method
+    return 0;
+    
 
     vector<int> v = {11, 23, 45, 89};
     v.push_back(15);
