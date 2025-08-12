@@ -43,3 +43,23 @@ sumTwoC(c(1, 2, 3), c(4, 5, 6))
 
 */
 
+
+// [[Rcpp::export]]
+double meanC(NumericVector x) {
+  int n = x.size();
+  double total = 0;
+
+  for(int i = 0; i < n; ++i) {
+    total += x[i];
+  }
+  return total / n;
+}
+
+/*** R
+x <- runif(1e5)
+bench::mark(
+  mean(x),
+  meanC(x)
+)
+isTRUE(mean(x)==meanC(x))
+*/
