@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 
@@ -39,6 +41,18 @@ class MyClass {
         string myString;
 };
 
+double meanC(vector<int> x)
+{
+    int n = x.size();
+    double total = 0;
+
+    for (int i = 0; i < n; ++i)
+    {
+        total += x[i];
+    }
+    return total / n;
+}
+
 int main()
 {
     cout << "Hello World" << endl;
@@ -71,6 +85,14 @@ int main()
     myObj2.myString = "pie";
 
     cout << myObj2.myNum << "\n";
-    cout << myObj2.myString;
+    cout << myObj2.myString << endl;
+
+    vector<int> v = {11, 23, 45, 89};
+    v.push_back(15);
+    for (auto i : v)
+        cout << i << " ";
+
+    cout << "mean is: " << meanC(v) << endl;
+
     return 0;
 }
